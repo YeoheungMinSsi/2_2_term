@@ -1,0 +1,204 @@
+.home-main {
+  height: 100%;
+  margin-top: 2rem;
+}
+.home-main .busanmap-container {
+  width: 100%;
+  height: 100%;
+}
+.home-main .busanmap-container svg {
+  width: 100%;
+  height: 100%;
+}
+.home-main .card-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.home-main .card-container .card-container-regionname {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 0.3rem 0;
+}
+.home-main .card-container .buk-card {
+  width: 25rem;
+  box-shadow: 0 0 4rem 0 rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
+}
+.home-main .card-container .card {
+  width: 100%;
+  height: 100%;
+}
+.home-main .card-container .card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.home-main .card-container .card .card-body .card-title {
+  margin-bottom: 1rem;
+}
+.home-main .card-container .card .card-body .card-content p {
+  font-size: 1.2rem;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: bold;
+  line-height: 2rem;
+}
+
+.busan-icon-container {
+  width: 100%;
+  height: 100%;
+}
+.busan-icon-container .busan-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.busan-icon-container .busan-icon .busan-icon-text {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.2);
+}
+.busan-icon-container .busan-icon .busan-icon-text2 {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+}
+.busan-icon-container .busan-icon .relative .absolute .group {
+  border-color: black;
+  z-index: 10;
+}
+.busan-icon-container .busan-icon .relative .absolute .group .inline-flex {
+  background-color: rgba(200, 247, 255, 0.38);
+}
+.busan-icon-container .busan-icon .relative .absolute .group .inline-flex svg path {
+  color: black;
+}
+.busan-icon-container .busan-icon .busan-icon-page {
+  padding: 5rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: default;
+}
+.busan-icon-container .busan-icon .busan-icon-page .tooltip {
+  background-color: transparent;
+  width: 13rem;
+  height: 10rem;
+}
+.busan-icon-container .busan-icon .busan-icon-page .tooltip::before {
+  font-size: 1.3rem;
+  max-width: 20rem;
+  max-height: 10rem;
+}
+.busan-icon-container .busan-icon .busan-icon-page .tooltip img {
+  width: 13rem;
+  height: 10rem;
+}
+.busan-icon-container .busan-icon .busan-icon-page .tooltip img:hover {
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  transform: scale(1.15);
+}
+
+.busan-map path {
+  position: relative;
+  fill: aquamarine;
+}
+.busan-map path:hover {
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  z-index: 10;
+  fill: #ff98e9;
+}
+.busan-map path.selected {
+  fill: #ff5ea2;
+}
+
+.home-main-content1 {
+  margin-bottom: 5rem;
+}
+
+.home-main-content2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+:is(.home-container, .gangseo-container, .geumjeong-container, .gijang-container,
+.nam-container, .dong-container, .dongnae-container, .busanjin-container, .buk-container,
+.sasang-container, .saha-container, .suyeong-container, .seo-container, .yeongdo-container,
+.yeonje-container, .jung-container, .haeundae-container, .regions-container) {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar-container {
+  width: 100%;
+  background-color: #CBD4FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar-container .navbar-main {
+  width: 70%;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+}
+.navbar-container .navbar-main .flex-1 img {
+  width: 5rem;
+  height: 5rem;
+}
+.navbar-container .navbar-main .flex-none .menu {
+  display: flex;
+  align-items: center;
+  background-color: #aebbff;
+  margin-right: 2rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.navbar-container .navbar-main .flex-none .menu li details ul {
+  width: 10rem;
+  z-index: 100;
+}
+.navbar-container .navbar-main .flex-none .menu li details ul li {
+  margin-top: 0.001rem;
+  border: none;
+}
+.navbar-container .navbar-main .flex-none .menu li details ul li a {
+  font-size: 1.2rem;
+  font-weight: bolder;
+  padding: 0.6rem;
+}
+
+.breadcrumbs {
+  margin: 1rem;
+}
+.breadcrumbs ul li {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.breadcrumbs ul li a {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+:is(.home-main, .buk-main, .busanjin-main, .dong-main, .dongnae-main, .gangseo-main, .geumjeong-main,
+.gijang-main, .haeundae-main, .jung-main, .nam-main, .saha-main, .sasang-main, .seo-main,
+.suyeong-main, .yeongdo-main, .yeonje-main, .regions-main) {
+  width: 70%;
+}
+
+/*# sourceMappingURL=components.css.map */

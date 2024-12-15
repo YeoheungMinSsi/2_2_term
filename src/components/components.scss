@@ -1,0 +1,282 @@
+@mixin make-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin make-width-height($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin transparent-background {
+  &:hover,
+  &::before,
+  &::after {
+    border-color: white;
+  }
+}
+
+@mixin bread-crumbs-text($font-size) {
+  font-size: $font-size;
+  font-weight: bold;
+}
+@mixin icon-container-text {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+
+.home-main {
+  height: 100%;
+  margin-top: 2rem;
+
+  .busanmap-container {
+    width: 100%;
+    height: 100%;
+    //background-color: #aebbff;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .card-container {
+    width: 100%;
+    height: 100%;
+    @include make-center;
+    flex-direction: column;
+
+    .card-container-regionname {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: rgba(0, 0, 0, 0.6);
+      margin: .3rem 0;
+    }
+
+    .buk-card {
+      width: 25rem;
+      box-shadow: 0 0 4rem 0 rgba(0, 0, 0, 0.3);
+      border-radius: 1rem;
+    }
+
+    .card {
+      width: 100%;
+      height: 100%;
+
+      .card-body { // 카드 설명fks
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: .5rem;
+
+        .card-title {
+          margin-bottom: 1rem;
+        }
+
+        .card-content {
+          p {
+            font-size: 1.2rem;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: bold;
+            line-height: 2rem;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+// 부산 아이콘 캐러셀 설정
+.busan-icon-container {
+  @include make-width-height(100%, 100%);
+
+  .busan-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .busan-icon-text {
+      @include icon-container-text;
+    }
+    .busan-icon-text2 {
+      @include icon-container-text;
+      font-size: 1rem;
+    }
+
+    .relative {
+      .absolute {
+        .group {
+          border-color: black;
+          z-index: 10;
+
+          .inline-flex {
+            background-color: rgba(200, 247, 255, 0.38);
+
+            svg {
+              path {
+                color: black;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .busan-icon-page {
+      //background-color: aqua;
+      padding: 5rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      cursor: default; // 지금 Carousel 때문에 포인터가 이상하게 됨
+      .tooltip {
+        background-color: transparent;
+        width: 13rem;
+        height: 10rem;
+
+        &::before {
+          font-size: 1.3rem;
+          max-width: 20rem;
+          max-height: 10rem;
+        }
+
+        img {
+          width: 13rem;
+          height: 10rem;
+
+          &:hover { // 아이콘 클릭시 호버되는 효과
+            transition: 0.3s ease-in-out;
+            cursor: pointer;
+            transform: scale(1.15);
+          }
+        }
+      }
+    }
+  }
+}
+
+// 부산 맵 svg 파일 설정
+.busan-map {
+  path {
+    position: relative;
+    fill: aquamarine;
+
+    &:hover {
+      transition: 0.5s ease-in-out;
+      cursor: pointer;
+      z-index: 10;
+      fill: #ff98e9;
+    }
+
+    &.selected {
+      fill: #ff5ea2;
+    }
+  }
+}
+
+.home-main-content1 {
+  margin-bottom: 5rem;
+}
+
+.home-main-content2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  //flex-direction: column;
+  justify-content: center;
+  //align-items: center;
+}
+
+
+:is(.home-container, .gangseo-container, .geumjeong-container, .gijang-container,
+.nam-container, .dong-container, .dongnae-container, .busanjin-container, .buk-container,
+.sasang-container, .saha-container, .suyeong-container, .seo-container, .yeongdo-container,
+.yeonje-container, .jung-container, .haeundae-container, .regions-container) {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+// navigator 설정
+.navbar-container {
+  width: 100%;
+  //height: 6rem;
+  background-color: #CBD4FF;
+  @include make-center;
+  justify-content: center;
+
+  .navbar-main {
+    width: 70%;
+    height: 8rem;
+    @include make-center;
+
+    .flex-1 {
+      //홈페이지 메인 아이콘
+      img {
+        width: 5rem;
+        height: 5rem;
+      }
+    }
+
+    .flex-none {
+      .menu {
+        @include make-center;
+        background-color: #aebbff;
+        margin-right: 2rem;
+        font-size: 1.3rem;
+        font-weight: bold;
+
+        li {
+          details {
+            ul {
+              width: 10rem;
+              z-index: 100;
+
+              li {
+                margin-top: 0.001rem;
+                border: none;
+
+                a {
+                  font-size: 1.2rem;
+                  font-weight: bolder;
+                  padding: 0.6rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+//메뉴 위치 창(브래드)
+.breadcrumbs {
+  margin: 1rem;
+
+  ul {
+    li {
+      @include bread-crumbs-text(1.3rem);
+
+      a {
+        @include bread-crumbs-text(1.2rem);
+      }
+    }
+  }
+}
+
+
+:is(.home-main, .buk-main, .busanjin-main, .dong-main, .dongnae-main, .gangseo-main, .geumjeong-main,
+ .gijang-main, .haeundae-main, .jung-main, .nam-main, .saha-main, .sasang-main, .seo-main,
+ .suyeong-main, .yeongdo-main, .yeonje-main, .regions-main) {
+  width: 70%;
+}
